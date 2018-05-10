@@ -1,17 +1,24 @@
 import React from 'react';
+import BotoneraDashboardCamaras from './BotoneraDashboardCamaras';
+import EspacioDashBoard from './EspacioDashBoard';
+import BarraInferiorEstado from './BarraInferiorEstado';
 import ListaComponent from '../containers/ListaComponent';
 import AddWordButtonComponent from '../containers/AddWordButtonComponent';
+require('../web/dashboardCamaras.css');
 
 export default class App extends React.Component {
 	
 	render() {
 		return (
-			<div>
-				<div>Hello React</div>
-				<video id="mivideo" width="960" height="480" autoPlay controls>
+			<div className="dashboardCamaras">
+				<BotoneraDashboardCamaras />
+				<EspacioDashBoard />
+				<BarraInferiorEstado />
+				<video id="mivideo" width="480" height="auto"> /* Original: 960x480 */
 					<source src="http://localhost/samplevideos/stream.webm" type="video/webm" />
 					<p>Este video no está soportado por el browser.</p>
-				</video><br />
+				</video>
+				<br />
 				<AddWordButtonComponent />
 				<ListaComponent />
 			</div>
