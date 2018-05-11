@@ -49,8 +49,8 @@ class EspacioGIS extends React.Component {
 		<div className="espacioGIS">
 			<div ref={this.mapaRef} id="cameraMap" style={{
 				backgroundImage: 'url("http://localhost/samplevideos/mapaWaypoint.png")',
-				width: '500px',
-				height: '620px'
+				width: '600px',
+				height: '620px' 
 			}} />
 		</div>
 		);
