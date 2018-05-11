@@ -8,22 +8,26 @@ const videos = [
 	{
 		id: 1,
 		source: "http://localhost/samplevideos/mp4Prueba2_60secs.mp4",
-		contentType: "video/mp4"
+		contentType: "video/mp4",
+		activo: false
 	},
 	{
 		id: 2,
 		source: "http://localhost/samplevideos/mp4Prueba2_120secs.mp4",
-		contentType: "video/mp4"
+		contentType: "video/mp4",
+		activo: false
 	},
 	{
 		id: 3,
 		source: "http://localhost/samplevideos/mp4Prueba2_10secs.mp4",
-		contentType: "video/mp4"
+		contentType: "video/mp4",
+		activo: true
 	},
 	{
 		id: 4,
 		source: "http://localhost/samplevideos/mp4Prueba2_20secs.mp4",
-		contentType: "video/mp4"
+		contentType: "video/mp4",
+		activo: false
 	}
 ];
 

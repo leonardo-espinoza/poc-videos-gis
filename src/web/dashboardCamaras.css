@@ -116,7 +116,7 @@
 .dockPropiedades {}
 
 .panelVideos {
-	background-color: black;
+	background-color: #222222;
 
 	display: -webkit-box;
 	display: -moz-box;
@@ -138,9 +138,38 @@
 }
 
 .video {
-	background-color: blue;
-	margin: 1px;
+	background-color: black;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	border: 2px;
+	margin: 2px;
 	padding: 0;
 	width: 480px;
-	height: 249;
+	height: 295px;
+	flex-direction: column;
+	border-color: black;
+}
+.video.activo { 
+	border-color: green;
+}
+
+.video .cabeceraVideo {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 480px;
+	height: 40px;
+}
+
+.video .pieVideo {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 480px;
+	height: 15px;
 }
