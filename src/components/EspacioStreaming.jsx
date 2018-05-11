@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 
 import InfoGrupos from './InfoGrupos'
 import PanelStreamCamaras from './PanelStreamCamaras'
-import PropiedadesCamara from './PropiedadesCamara'
 
 const mapStateToProps = (state) => {
 	return {
@@ -23,7 +22,6 @@ const EspacioStreaming = ({ parametros }) => (
 	<div className="espacioStreaming">
 		<InfoGrupos />
 		<PanelStreamCamaras />
-		<PropiedadesCamara />
 	</div>
 );
 

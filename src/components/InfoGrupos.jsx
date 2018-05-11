@@ -16,7 +16,7 @@ const mapDistpatchToProps = (dispatch) => {
 }
 
 const InfoGrupos = ({ parametros }) => (
-	<div className="dockPropiedades">
+	<div className="espacioPropiedades">
 		Info Grupos
 	</div>
 );
