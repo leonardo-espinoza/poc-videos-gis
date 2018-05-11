@@ -17,7 +17,7 @@ const mapDistpatchToProps = (dispatch) => {
 
 const BarraInferiorEstado = ({ parametros }) => (
 	<div className="barraHorizontalBottom">
-		BarraInferiorEstado
+		Barra Inferior Estado
 	</div>
 	/*<ul>
 		{parametros.map((parametro, idx) => 

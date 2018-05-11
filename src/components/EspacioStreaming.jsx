@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import InfoGrupos from './InfoGrupos'
+import PanelStreamCamaras from './PanelStreamCamaras'
+import PropiedadesCamara from './PropiedadesCamara'
+
 const mapStateToProps = (state) => {
 	return {
     	parametros: state.myReducer
@@ -15,21 +19,18 @@ const mapDistpatchToProps = (dispatch) => {
 	}
 }
 
-const BotoneraDashboardCamaras = ({ parametros }) => (
-	<div className="barraHorizontalBotonera">
-		Botonera Dashboard Camaras
+const EspacioStreaming = ({ parametros }) => (
+	<div className="espacioStreaming">
+		<InfoGrupos />
+		<PanelStreamCamaras />
+		<PropiedadesCamara />
 	</div>
-	/*<ul>
-		{parametros.map((parametro, idx) => 
-			<li key={idx}>{parametro}</li>
-		)}
-	</ul>*/
 );
 
-BotoneraDashboardCamaras.propTypes = {
+EspacioStreaming.propTypes = {
 	parametros: PropTypes.arrayOf(PropTypes.string)
 };
 
 
 
-export default connect(mapStateToProps, null)(BotoneraDashboardCamaras);
+export default connect(mapStateToProps, null)(EspacioStreaming);

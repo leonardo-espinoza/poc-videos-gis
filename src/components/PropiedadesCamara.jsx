@@ -15,21 +15,16 @@ const mapDistpatchToProps = (dispatch) => {
 	}
 }
 
-const BotoneraDashboardCamaras = ({ parametros }) => (
-	<div className="barraHorizontalBotonera">
-		Botonera Dashboard Camaras
+const PropiedadesCamara = ({ parametros }) => (
+	<div className="dockPropiedades">
+		Propiedades Camara
 	</div>
-	/*<ul>
-		{parametros.map((parametro, idx) => 
-			<li key={idx}>{parametro}</li>
-		)}
-	</ul>*/
 );
 
-BotoneraDashboardCamaras.propTypes = {
+PropiedadesCamara.propTypes = {
 	parametros: PropTypes.arrayOf(PropTypes.string)
 };
 
 
 
-export default connect(mapStateToProps, null)(BotoneraDashboardCamaras);
+export default connect(mapStateToProps, null)(PropiedadesCamara);

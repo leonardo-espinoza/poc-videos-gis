@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+
 const mapStateToProps = (state) => {
 	return {
     	parametros: state.myReducer
@@ -15,21 +16,17 @@ const mapDistpatchToProps = (dispatch) => {
 	}
 }
 
-const BotoneraDashboardCamaras = ({ parametros }) => (
-	<div className="barraHorizontalBotonera">
-		Botonera Dashboard Camaras
+
+const EspacioGIS = ({ parametros }) => (
+	<div className="espacioGIS">
+		<div id="cameraMap" />
 	</div>
-	/*<ul>
-		{parametros.map((parametro, idx) => 
-			<li key={idx}>{parametro}</li>
-		)}
-	</ul>*/
 );
 
-BotoneraDashboardCamaras.propTypes = {
+EspacioGIS.propTypes = {
 	parametros: PropTypes.arrayOf(PropTypes.string)
 };
 
 
 
-export default connect(mapStateToProps, null)(BotoneraDashboardCamaras);
+export default connect(mapStateToProps, null)(EspacioGIS);

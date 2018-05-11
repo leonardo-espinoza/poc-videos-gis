@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import EspacioStreaming from './EspacioStreaming'
+import EspacioGIS from './EspacioGIS'
+
 const mapStateToProps = (state) => {
 	return {
     	parametros: state.myReducer
@@ -17,7 +20,8 @@ const mapDistpatchToProps = (dispatch) => {
 
 const EspacioDashBoard = ({ parametros }) => (
 	<div className="dashboardCentral">
-		EspacioDashBoard
+		<EspacioStreaming />
+		<EspacioGIS />
 	</div>
 	/*<ul>
 		{parametros.map((parametro, idx) => 

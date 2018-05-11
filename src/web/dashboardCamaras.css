@@ -7,10 +7,11 @@
 	display: flex;
 
 	padding: 0;
-	margin: 5px 100px 5px 100px;
+	margin: 5px 30px 5px 30px;
 
 	flex-direction: column;
 	min-width: 1100px;
+	max-width: 1700px;
 
 	flex-wrap: nowrap;
 	overflow-x: auto;
@@ -26,7 +27,6 @@
 	list-style: none;
 
 	flex-direction: row;
-/*	width: 100%; */
 	height: 100px;
 	flex-wrap: nowrap;
 	overflow-x: auto;
@@ -37,17 +37,27 @@
 .dashboardCentral {
 	background-color: blue;
 
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
 	padding: 0;
 	margin: 0;
 	list-style: none;
 
 	flex-direction: row;
-/*	width: 100%; */
-	height: 500px;
+	height: 620px;
+	min-height: 620px;
+	flex-basis: auto;
+	flex-grow: 1;
 	flex-wrap: nowrap;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
+
+	justify-content: space-between;
 }
 
 .barraHorizontalBottom {
@@ -58,7 +68,6 @@
 	list-style: none;
 
 	flex-direction: row;
-/*	width: 100%; */
 	height: 30px;
 	flex-wrap: nowrap;
 	overflow-x: auto;
@@ -66,13 +75,72 @@
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.espacioStreaming {
+	background-color: #ddddff;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	min-width: 600px;
+	max-width: 1200px;
+	height: 620px;
+	min-height: 620px;
+	flex-direction: row;
+	flex: 0 0 auto;
+	flex-wrap: nowrap;
+	flex-grow: 1;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.espacioGIS {
+	background-color: white;
+
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	width: 500px;
+	height: 620px;
+	flex: 0 0 auto;
+}
+
+.dockPropiedades {}
+
+.panelVideos {
+	background-color: black;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	width: 1030px;
+	max-width: 1030px;
+	height: 600px;
+	overflow-y: scroll;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
 .video {
 	background-color: blue;
 	margin: 1px;
-	min-width: 214px;
-	min-height: 317px;
-	max-width: 214px;
-	max-height: 317px;
-	flex: 0 0 auto;
-/*	flex-basis: 214px; */
+	padding: 0;
+	width: 480px;
+	height: 249;
 }

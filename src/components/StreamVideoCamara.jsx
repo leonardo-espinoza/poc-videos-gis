@@ -15,21 +15,20 @@ const mapDistpatchToProps = (dispatch) => {
 	}
 }
 
-const BotoneraDashboardCamaras = ({ parametros }) => (
-	<div className="barraHorizontalBotonera">
-		Botonera Dashboard Camaras
+/* Original Video size: 960x480 */
+const StreamVideoCamara = ({ camara, parametros }) => (
+	<div className="video">
+		<video id={"camara_"+camara.id} width="480" height="auto" autoPlay loop >
+			<source src={camara.source} type={camara.contentType} />
+			<p>Este video no está soportado por el browser.</p>
+		</video>
 	</div>
-	/*<ul>
-		{parametros.map((parametro, idx) => 
-			<li key={idx}>{parametro}</li>
-		)}
-	</ul>*/
 );
 
-BotoneraDashboardCamaras.propTypes = {
+StreamVideoCamara.propTypes = {
 	parametros: PropTypes.arrayOf(PropTypes.string)
 };
 
 
 
-export default connect(mapStateToProps, null)(BotoneraDashboardCamaras);
+export default connect(mapStateToProps, null)(StreamVideoCamara);
