@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import DockAlertas from './DockAlertas'
+
 const mapStateToProps = (state) => {
 	return {
     	parametros: state.myReducer
@@ -17,13 +19,8 @@ const mapDistpatchToProps = (dispatch) => {
 
 const BarraInferiorEstado = ({ parametros }) => (
 	<div className="barraHorizontalBottom">
-		Barra Inferior Estado
+		<DockAlertas />
 	</div>
-	/*<ul>
-		{parametros.map((parametro, idx) => 
-			<li key={idx}>{parametro}</li>
-		)}
-	</ul>*/
 );
 
 BarraInferiorEstado.propTypes = {

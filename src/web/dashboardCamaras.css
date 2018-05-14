@@ -138,7 +138,7 @@ body {
 	list-style: none;
 
 	flex-direction: row;
-	height: 30px;
+	height: 200px;
 	flex-wrap: nowrap;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
@@ -202,35 +202,46 @@ body {
 	max-width: 200px;
 	height: 600px;
 }
-.dockPropiedades {
+.dockPropiedadesH {
 	background-color: #032b44;
 
+	margin: 2px 0 1px 0;
+	min-width: 1615px;
+	max-width: 1700px;
+	width: 1615px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.dockPropiedadesV {
+	background-color: #032b44;
+
+	margin: 2px 0 1px 0;
 	min-width: 160px;
 	max-width: 165px;
-	height: 250px;
-	margin: 2px 0 1px 0;
+	width: 165px;
+	height: 600px;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
-.dockPropiedades table { width: 100% }
-.dockPropiedades .encabezadoDock {
+/*.dockPropiedades table { width: 100% } */
+.dockPropiedadesH .encabezadoDock, .dockPropiedadesV .encabezadoDock {
 	font-weight: bold;
 	background: linear-gradient(#0090ea,#001725);
-
-	height: 25px;
 }
-.dockPropiedades .cuerpoDock {
+.dockPropiedadesH .cuerpoDock, .dockPropiedadesV .cuerpoDock {
 	font-size: 0.85em;
 }
 
-.dockPropiedades .cuerpoDock tr:hover {
+.dockPropiedadesH .cuerpoDock tr:hover,.dockPropiedadesV .cuerpoDock tr:hover {
 	background-color: #0090ea;
 }
-.dockPropiedades .cuerpoDock .nombre {
-	text-align: left;
-}
-.dockPropiedades .cuerpoDock .valor {
-	text-align: right;
-}
 
+.dockPropiedadesV table {
+	width: 160px;
+}
+.dockPropiedadesH table {
+	width: 1600px;
+}
 
 .panelVideos {
 	background-color: #222222;

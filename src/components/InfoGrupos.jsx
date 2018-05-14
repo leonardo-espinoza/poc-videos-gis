@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import CamarasTree from './CamarasTree'
-import AlertasList from './AlertasList'
+import PropiedadesMoviles from './PropiedadesMoviles'
 
 const mapStateToProps = (state) => {
 	return {
@@ -21,7 +21,7 @@ const mapDistpatchToProps = (dispatch) => {
 const InfoGrupos = ({ parametros }) => (
 	<div className="espacioPropiedades">
 		<CamarasTree />
-		<AlertasList />
+		<PropiedadesMoviles />
 	</div>
 );
 

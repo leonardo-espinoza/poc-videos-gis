@@ -16,21 +16,24 @@ const mapDistpatchToProps = (dispatch) => {
 }
 
 const CamarasTree = ({ parametros }) => (
-	<div className="dockPropiedades">
+	<div className="dockPropiedadesV">
 		<div className="encabezadoDock">
 			DVR / Cámaras
 		</div>
-		<ul className="cuerpoDock">
-			<li>Grupo 1</li>
-			<li>Grupo 2</li>
-			<li>
-				<ul>
-					<li>Cámara 1</li>
-					<li>Cámara 2</li>
-					<li>Cámara 3</li>
-				</ul>
-			</li>
-		</ul>
+		<div className="cuerpoDock"> 
+			Cliente X
+			<ul>
+				<li>Grupo 1</li>
+				<li>Grupo 2</li>
+				<li>Grupo 3
+					<ul>
+						<li>PT1010</li>
+						<li>NB3467</li>
+						<li>XX7654</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
 );
 
