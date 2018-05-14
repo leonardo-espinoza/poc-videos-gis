@@ -17,13 +17,24 @@ const mapDistpatchToProps = (dispatch) => {
 
 const BotoneraDashboardCamaras = ({ parametros }) => (
 	<div className="barraHorizontalBotonera">
-		Botonera Dashboard Camaras
+		<div className="botoneraIzquierda">
+			<div class="boton glass">Botón 1</div>
+			<div class="boton glass">Botón 2</div>
+			<div class="boton glass">Botón 3</div>
+		</div>
+		<div className="botoneraDerecha">
+			<div class="boton glass">Botón A</div>
+			<div class="boton glass">Botón B</div>
+			<div class="boton glass">Botón C</div>
+		</div>
+		<div className="infoUsuario">
+			<div class="info glass">
+				Leonardo A. Espinoza<br/>
+				9:45<br />
+				14/05/2018
+			</div>
+		</div>
 	</div>
-	/*<ul>
-		{parametros.map((parametro, idx) => 
-			<li key={idx}>{parametro}</li>
-		)}
-	</ul>*/
 );
 
 BotoneraDashboardCamaras.propTypes = {

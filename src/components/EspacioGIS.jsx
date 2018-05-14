@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-//import LoadGoogleMapsApi from 'load-google-maps-api'
+import LoadGoogleMapsApi from 'load-google-maps-api'
 
 
 const OPTIONS = {
@@ -33,22 +33,21 @@ class EspacioGIS extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.mapaRef = React.createRef();
+		//this.mapaRef = React.createRef();
 	}
 
-/*	componentDidMount() {
+	componentDidMount() {
 		LoadGoogleMapsApi( API_CONFIG ).then(googleMaps => {
 			this.googleMapCamara = new googleMaps.Map(this.refs.mapaRef, OPTIONS);
 		}).catch(err => {
 			console.log('No se pudo cargar el mapa', err);
 		});
 	}
-*/
+
 	render() {
 		return (
 		<div className="espacioGIS">
-			<div ref={this.mapaRef} id="cameraMap" style={{
-				backgroundImage: 'url("http://localhost/samplevideos/mapaWaypoint.png")',
+			<div ref="mapaRef" id="cameraMap" style={{
 				width: '600px',
 				height: '620px' 
 			}} />
@@ -65,3 +64,5 @@ EspacioGIS.propTypes = {
 
 
 export default connect(mapStateToProps, null)(EspacioGIS);
+
+//				backgroundImage: 'url("http://localhost/samplevideos/mapaWaypoint.png")',
