@@ -20,7 +20,7 @@ const PropiedadesMoviles = ({ parametros }) => (
 		<table>
 			<thead className="encabezadoDock">
 				<tr>
-					<th colspan="2">Propiedades DVR</th>
+					<th colSpan="2">Propiedades DVR</th>
 				</tr>
 			</thead>
 			<tbody className="cuerpoDock vertical">

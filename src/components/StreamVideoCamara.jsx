@@ -16,19 +16,26 @@ const mapDistpatchToProps = (dispatch) => {
 }
 
 /* Original Video size: 960x480 */
-/* {{ "video " + camara.activo? 'activo': 'inactivo' }} */
-const StreamVideoCamara = ({ camara, parametros }) => (
-	<div className="video" style={{ borderColor: ((camara.activo===true)? "#0090ea": "#222222") }}>
-		<div className="cabeceraVideo">
-			Cámara: {camara.id}
-		</div>
-		<video id={"camara_"+camara.id} width="480" height="auto" autoPlay loop >
-			<source src={camara.source} type={camara.contentType} />
-			<p>Este video no está soportado por el browser.</p>
-		</video>
-		<div className="pieVideo" />
-	</div>
-);
+class StreamVideoCamara extends React.Component {
+	componentDidMount() {
+
+	}
+
+	render() {
+		return (
+			<div className="video" style={{ borderColor: ((this.props.camara.activo===true)? "#0090ea": "#222222") }}>
+				<div className="cabeceraVideo">
+					Cámara: {this.props.camara.id}
+				</div>
+				<video id={"camara_"+this.props.camara.id} width="480" height="auto" autoPlay loop >
+					<source src={this.props.camara.source} type={this.props.camara.contentType} />
+					<p>Este video no está soportado por el browser.</p>
+				</video>
+				<div className="pieVideo" />
+			</div>
+		);
+	}
+}
 
 StreamVideoCamara.propTypes = {
 	parametros: PropTypes.arrayOf(PropTypes.string)
